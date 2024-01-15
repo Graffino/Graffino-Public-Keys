@@ -21,16 +21,16 @@ This repo is the source for the graffino `allowed_signers` file for commit signi
     git config --global tag.gpgsign true
     git config --global user.signingKey "$PUBLIC_KEY"
     git config --global gpg.ssh.allowedSignersFile "~/.config/git/allowed_signers"
-``
+```
 
 ## Update your GitHub account with a signing key
 
 1. Copy your public key to the clipboard: `pbcopy < ~/.ssh/firstname.lastname.pub` (make sure the correct filename is here.)
-1. Go to [Github Keys](https://github.com/settings/keys)
-2. Select `New SSH Key`
-3. Select `Key type` as `Signing Key`
-4. Paste your public key
-5. Press `Add SSH Key`.
+2. Go to [Github Keys](https://github.com/settings/keys)
+3. Select `New SSH Key`
+4. Select `Key type` as `Signing Key`
+5. Paste your public key
+6. Press `Add SSH Key`.
 
 Note: Do NOT delete any of the GPG keys stored there. These must remain there for all eternity or else the commits signed with them will become untrusted.
 
