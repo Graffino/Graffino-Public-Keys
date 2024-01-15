@@ -5,9 +5,9 @@ This repo is the source for the graffino `allowed_signers` file for commit signi
 ## Add your key
 
 1. Add your file to the `keys` folder in the `firstname.lastname.key.pub`.
-2. Make sure the comment in your public key is in the `Firstname Lastname (firstname.lastname@graffino.com)` format.
+2. Make sure your public key has a comment with your e-mail address. If the e-mail is incorrect, edit it.
 3. Create a PR with your commit and wait for it to be approved.
-4. Keys are updated every 30 minutes.
+4. Keys are updated every 5 minutes and on system boot. After 5 minutes the keys should appear in `~/.config/git/allowed_signers`.
 
 ## Configure Git
 
