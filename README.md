@@ -14,13 +14,14 @@ This repo is the source for the graffino `allowed_signers` file for commit signi
 1. Run `configure.sh` or just:
 
 ```bash
-    PUBLIC_KEYS=$( cat "$BASE_PATH"/keys/*.pub )
-    PUBLIC_KEY="${PUBLIC_KEYS[0]}"
-    git config --global gpg.format ssh
-    git config --global commit.gpgsign true
-    git config --global tag.gpgsign true
-    git config --global user.signingKey "$PUBLIC_KEY"
-    git config --global gpg.ssh.allowedSignersFile "~/.config/git/allowed_signers"
+   USER=$(stat -f "%Su" /dev/console)
+   USER_PUBLIC_KEYS=$( cat "/Users/$USERS/.ssh/*.pub" )
+   USER_PUBLIC_KEY="${USER_PUBLIC_KEYS[0]}"
+   git config --global gpg.format ssh
+   git config --global commit.gpgsign true
+   git config --global tag.gpgsign true
+   git config --global user.signingKey "$PUBLIC_KEY"
+   git config --global gpg.ssh.allowedSignersFile "~/.config/git/allowed_signers"
 ```
 
 ## Update your GitHub account with a signing key

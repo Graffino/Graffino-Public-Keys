@@ -1,6 +1,7 @@
 #!bin/zsh
+USER=$(stat -f "%Su" /dev/console)
 
-PUBLIC_KEYS=$( cat "$BASE_PATH"/keys/*.pub )
+PUBLIC_KEYS=$( cat "/Users/$USERS/.ssh/*.pub" )
 PUBLIC_KEY="${PUBLIC_KEYS[0]}"
 git config --global gpg.format ssh
 git config --global commit.gpgsign true
