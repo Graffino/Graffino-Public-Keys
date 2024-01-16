@@ -11,7 +11,7 @@ This repo is the source for the graffino `allowed_signers` file for commit signi
 
 ## Configure Git
 
-1. Run `configure.sh` or run replacing [[USER]] and [[YOUR_PUBLIC_KEY]]
+1. Run `configure.sh` or run replacing `[USER]` and `[YOUR_PUBLIC_KEY]`
 
 ```bash
    git config --global gpg.format ssh
