@@ -1,8 +1,6 @@
 #!bin/zsh
 USER=$(stat -f "%Su" /dev/console)
 
-#!/bin/zsh
-
 # Define the array with public key files
 PUBLIC_KEYS=( "/Users/$USER/.ssh/"*.pub )
 
